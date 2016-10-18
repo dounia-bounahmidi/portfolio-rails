@@ -164,6 +164,36 @@ a {
   font-weight: 100; 
  }
  
+/* About Page */ 
+    
+.about {
+ padding-top: 100px; 
+ text-align: center; 
+}
+    
+.about img {
+  width: 300px; 
+  height: auto; 
+ }
+    
+#right {
+ text-align: left; 
+}
+    
+.about h1 {
+  color: #FFF; 
+  width: 300px; 
+  font-size: 40px; 
+  line-height: 55px; 
+}
+   
+    .about p {
+      font-weight: 100; 
+    }
+    
+ .about span {
+   background: #402039;
+ }
 
 
 
@@ -199,8 +229,8 @@ a {
         <ul class="navigation">
           <li> <%= link_to 'Welcome', 'welcome' %></li>
           <li> <%= link_to 'Portfolio', 'portfolio' %></li>
-          <li>Blog</li>
-          <li>About</li>
+          <li> <%= link_to 'Blog', 'https://medium.com' %></li>
+          <li> <%= link_to 'About', 'about' %> </li>
           <li>Contact</li>
         </ul>
       </div>
