@@ -9,8 +9,10 @@ html, body {
 }
 
 .container {
-  max-width: 940px; 
+  max-width: 980px; 
 }
+
+/* Welcome Page */ 
 
 .header {
   height: 100px; 
@@ -113,6 +115,13 @@ html, body {
   font-weight: 100; 
 }
 
+/* Portfolio Page */ 
+
+
+
+
+
+
 @media screen and (max-width: 500px) {
   .header {
     padding-top: 60px; 
@@ -129,3 +138,4 @@ html, body {
     padding-bottom: 20px; 
   }
 }
+

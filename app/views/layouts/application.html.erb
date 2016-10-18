@@ -4,13 +4,249 @@
   <title>Portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,500,700" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/idiot/unslider/master/dist/css/unslider.css">
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/css/unslider.css' rel='stylesheet' type='text/css'>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/css/unslider-dots.css' rel='stylesheet' type='text/css'>
+  <style>
+    html, body {
+  padding: 0;
+  margin: 0; 
+  background: #FFF; 
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 980px; 
+}
+    
+a {
+ text-decoration: none; 
+ color: black; 
+}
+
+/* Welcome Page */ 
+
+.header {
+  height: 100px; 
+  padding-top: 35px; 
+}
+
+.navigation ul {
+  list-style-type: none;
+  text-align: center; 
+}
+
+.navigation li {
+  display: inline; 
+  font-size: 18px;
+  padding: 10px; 
+  color: black; 
+  cursor: pointer; 
+}
+
+.navigation li:hover {
+  text-decoration: underline; 
+}
+    
+.navigation li a:hover {
+  text-decoration: underline; 
+  color: black; 
+}
+
+.name p {
+  font-size: 18px; 
+  font-weight: 500; 
+  text-align: center;
+  color: black; 
+}
+
+.main {
+  height: 500px; 
+  padding-top: 150px; 
+  background: url("https://hd.unsplash.com/5/unsplash-kitsune-4.jpg") no-repeat center center; 
+  background-size: cover; 
+}
+
+.main p {
+  font-size: 40px;
+  color: #FFF; 
+  width: 650px; 
+  font-weight: 700; 
+}
+
+.main span {
+  background: #402039;
+  opacity: 0.8; 
+}
+
+.main button {
+  float: right; 
+  margin-right: 20px; 
+  width: 180px; 
+  height: 60px; 
+  padding: 10px 20px; 
+  font-size: 17px; 
+  font-weight: 100; 
+  color: #FFF; 
+  background: black; 
+  opacity: 0.9; 
+  border: none; 
+}
+    
+.main button a {
+   color: #FFF; 
+}
+    
+.main button a:hover {
+   color: #FFF; 
+   text-decoration: none; 
+}
+
+.main button:hover {
+  background: #402039; 
+  transition: 0.4s background ease-in; 
+  opacity: 1; 
+  transition: 0.2s opacity ease-in;
+}
+
+.footer {
+  height: 200px; 
+  padding-top: 100px; 
+}
+
+.footer ul {
+  list-style-type: none; 
+  text-align: center; 
+  margin-right: 25px; 
+}
+
+.footer li {
+  display: inline; 
+  padding: 5px;
+}
+
+.footer img {
+  width: 25px; 
+  height: 25px; 
+  cursor: pointer; 
+}
+
+#github {
+  width: 35px; 
+  height: 35px; 
+}
+
+.footer p {
+  color: black; 
+  font-weight: 100; 
+}
+
+/* Portfolio Page */ 
+    
+.banner img {
+    width: 100%; 
+    height: auto; 
+}
+    
+.supporting img {
+  width: 450px; 
+  height: 300px; 
+  padding: 20px; 
+ }
+ 
+.block h6 {
+  padding-left: 30px;
+  font-size: 28px; 
+ }
+    
+ .block p {
+  padding-left: 30px; 
+  font-weight: 100; 
+ }
+ 
+
+
+
+
+
+@media screen and (max-width: 500px) {
+  .header {
+    padding-top: 60px; 
+    height: 150px; 
+  }
+  
+  .header li {
+    font-size: 15px; 
+  }
+  
+  .main p {
+    font-size: 30px;  
+    width: 400px; 
+    padding-bottom: 20px; 
+  }
+}
+  </style>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  
+  
+<div class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-8">
+        <ul class="navigation">
+          <li> <%= link_to 'Welcome', 'welcome' %></li>
+          <li> <%= link_to 'Portfolio', 'portfolio' %></li>
+          <li>Blog</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="name">
+        <p>Dounia Bounahmidi</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= yield %>
+  
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class=" pull-right">
+        <ul class="social">
+          <li><a href="https://fr.linkedin.com/in/dounia-bounahmidi-9ab1386a
+            "><img src="https://www.dropbox.com/s/r4nsaa86ee4xvti/linkedin-logo%20%281%29.png?raw=1"></a></li>
+          <li><a href="https://www.instagram.com/dounia02/"><img src="https://www.dropbox.com/s/xg68punamgr8wse/instagram-social-network-logo-of-photo-camera.png?raw=1"></a></li>
+         <li><a href="https://github.com/dounia-bounahmidi"><img src="https://www.dropbox.com/s/jhp4s4jbxx6bfwq/github-logo.png?raw=1" id="github"></a></li>
+        </ul>
+        <p>&copy; 2016 Dounia Bounahmidi</p>
+      </div>
+    </div>
+  </div>
+</div> 
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/unslider/2.0.3/js/unslider-min.js"></script>
 
+<script>
+    $(document).ready(function(){
+        $('.banner').unslider({
+        speed: 500,               //  The speed to animate each slide (in milliseconds)
+        delay: 3000,              //  The delay between slide animations (in milliseconds)
+        complete: function() {},  //  A function that gets called after every slide animation
+        keys: true,               //  Enable keyboard (left, right) arrow shortcuts
+        dots: true,               //  Display dot navigation
+        fluid: true              //  Support responsive design. May break non-responsive designs
+        });
+     });
+</script>
 </body>
 </html>
